@@ -1,2 +1,52 @@
 #peliculastaquilleras{background-color: blue;}
-
+.main-header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.logo{
+    width: 15.25%; /* 180px/ 1180px*/
+    margin-bottom: 30px;
+    border: 1px solid #ccc;
+}
+.main-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.main-conainer{
+    margin-left: 1.69%;
+}
+.main-container{
+    color: #444;
+}
+.main-container a:hover{
+    text-decoration: underline;
+}
+.main-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+    
+}
+.main-nav li{
+    text-align: center;
+    width: 15.25%;  
+}
+.main-nav a{
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: rgb(103, 185, 103);
+    color: rgb(3, 3, 3); 
+    padding: 16px 0;
+}
+body{
+    background-image: url();
+}
