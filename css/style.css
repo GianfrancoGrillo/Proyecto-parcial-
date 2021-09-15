@@ -1,9 +1,24 @@
+/* Generales */
+
+li{
+    list-style: none;
+    }
+
+    body{
+        font-family:fantasy; 
+        margin: none;
+    }
+
+
+
+/* TITULOS DE LA PAGINA */
 .titulos {
 background-color: cyan;
 font-size: 40px;
 text-align: center;
-
 }
+
+/* HEADER */
 .main-header{
     display: flex;
     flex-wrap: wrap;
@@ -17,27 +32,15 @@ text-align: center;
     border: 1px solid #ccc;
 }
 
-li{
-list-style: none;
-}
-
-
-
 .main-container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: flex-end;
-}
-.main-conainer{
     margin-left: 1.69%;
-}
-.main-container{
     color: #444;
 }
-.main-container a:hover{
-    text-decoration: underline;
-}
+
 .main-nav ul{
     display: flex;
     flex-wrap: wrap;
@@ -61,7 +64,17 @@ list-style: none;
     padding: 16px 0;
 }
 
-.avatar{
+.main-nav a:hover{
+    text-decoration: underline;
+}
+
+/* cierre de header */
+
+
+
+/* Marco pelicula  */
+
+.marco-pelicula{
     background-color: bisque;
     font-family:Arial, Helvetica, sans-serif;
     margin: 3%;
@@ -71,18 +84,28 @@ list-style: none;
     border: black;
 }
 
+/* Fotos landing */
 
-body{
-    background-image: url();
-}
-
-.lista_container {
+.lista_container{
     display: flex;
-    background-color: #444;
-    width: 100vw;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+
 }
 
-li img{
-    width: 130px;
-    background-color: #ccc;
+.lista_container li {
+    margin: 0px;
+    padding: 10px;
+    text-align: center;
+    align-items: center;
+    max-width: 200px;
 }
+
+.lista_container li img{
+    width: 100%;
+}
+
