@@ -10,39 +10,37 @@
 </head>
 
 <body>
-    <div class="main-container">
-        <form action="search-results.html" method="GET">
-            <div>
-                <label for="buscar">Buscar</label>
-                <input type="text" name="buscar" id="buscar" value="">
-                <button>Click Me!</button>
-            </div>
-        </form>
-      </div>
      <header class="main-Heeader">
-        <img src="./img/Negro, Blanco y Triángulo Datos Juegos de Persecución Logo (1).png" alt="logotipo" class="logo">
-        <a href="#" class="toggle-nav">
-            <span class="fa fa-bars"></span>
-        </a>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./favourite.html">Favoritos</a></li>
-                <li><a href="generos.html">Géneros</a></li>
-            </ul>
-          </nav>
+         <div>
+            <img src="./img/Negro, Blanco y Triángulo Datos Juegos de Persecución Logo (1).png" alt="logotipo" class="logo">
+
+            <div class="main-container">
+                <form action="search-results.html" method="GET">
+                        <label for="buscar">Search movies or series</label>
+                        <input type="text" name="buscar" id="buscar" value="">
+                        <button>Buscar</button>
+                </form>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./favourite.html">Favoritos</a></li>
+                    <li><a href="generos.html">Géneros</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+    
     <main>
 
         <section>
-
-            <h2 id="peliculastaquilleras"> Las peliculas mas taquilleras</h2>
-            <ul>
+            <h3 class="titulos"> Las peliculas mas taquilleras</h3>
+            <ul class="lista_container">
                 <li>
                     <a href="/detalle-pelicula.html">
                         <h3>Avatar 18/12/2009 </h3>
-                    </a>
-                    <img style="width:300px;" src="img/avatar.jpg">
+                    <img src="img/avatar.jpg">
+                    </a>    
                 </li>
                 <li>
                     <a href="./detalle-pelicula.html">
@@ -78,7 +76,7 @@
         </section>
 
         <section>
-            <h2>Series mejor puntuadas segun IMDB</h2>
+            <h3 class="titulos">Series mejor puntuadas segun IMDB</h3>
             <ul>
 
                 <li>
@@ -127,7 +125,7 @@
         </section>
 
         <section>
-            <h2>Peliculas mas vistas en la historia</h2>
+            <h3 class="titulos">Peliculas mas vistas en la historia</h3>
 
             <ul>
                 <li>
