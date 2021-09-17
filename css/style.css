@@ -114,3 +114,18 @@ text-align: center;
 .lista_container li img{
     width: 100%;
 }
+
+@media(max-width:768px){
+    /*Dispositivos medianos*/
+.lista_container{
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media(max-width:320px){
+.lista_container{
+    flex-direction: column;
+    align-items: center;
+}
+}
+      
