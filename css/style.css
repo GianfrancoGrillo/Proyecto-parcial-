@@ -126,6 +126,9 @@ text-align: center;
     text-decoration: none;
 }
 
+
+/* Media query */
+
 @media(max-width:768px){
     /*Dispositivos medianos*/
 .lista_container{
