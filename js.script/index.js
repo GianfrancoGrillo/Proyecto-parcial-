@@ -17,7 +17,7 @@ fetch(url)
         for (let i = 0; i < 5; i++) {
             infoPelis +=
                 `
-           <a href="detalle.html?id=${array[i].id}">
+           <a href="detalle-pelicula.html?id=${array[i].id}">
            <article>
                <h3>${array[i].title}</h3>
                <img src="${imagenes + array[i].poster_path}" alt="${array[i].title}">
@@ -56,7 +56,7 @@ fetch(urll)
         for (let i = 0; i < 5; i++) {
             infoSeries +=
                 `
-           <a href="detalle.html?id=${array[i].id}">
+           <a href="detalle-series.html?id=${array[i].id}">
            <article>
                <h3>${array[i].name}</h3>
                <img src="${imagenes + array[i].poster_path}" alt="${array[i].name}">
@@ -96,7 +96,7 @@ fetch(urlll)
         for (let i = 0; i < 5; i++) {
             infoValoradas +=
                 `
-   <a href="detalle.html?id=${array[i].id}">
+   <a href="detalle-pelicula.html?id=${array[i].id}">
    <article>
        <h3>${array[i].title}</h3>
        <img src="${imagenes + array[i].poster_path}" alt="${array[i].title}">
