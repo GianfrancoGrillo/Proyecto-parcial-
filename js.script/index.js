@@ -13,7 +13,7 @@ fetch(url)
     .then(function (data) {
         let array = data.results;
         let pelisPopulares = document.querySelector('#peliculasPopulares')
-        let infoPelis = ''
+        let infoPelis = '';
         for (let i = 0; i < 5; i++) {
             infoPelis +=
                 `
