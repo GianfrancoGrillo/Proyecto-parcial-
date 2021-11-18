@@ -82,9 +82,11 @@ color:white;
     justify-content: center;
 }
 .logo{
-    width: 15%; 
-    margin-bottom: 30px;
-    border-radius: 90px;
+    border-radius: 48%;
+    width: auto;
+    height: 170px;
+    margin-top: 20px;
+    margin-left: 20PX;
 }
 
 .main-nav ul{
