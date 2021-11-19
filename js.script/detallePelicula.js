@@ -8,7 +8,7 @@ let id = qsToObject.get('id');
 let url= `https://api.themoviedb.org/3/movie/${id}?api_key=fcb65972de75954111563f90b05f9fed`
 let urlImg=`https://image.tmdb.org/t/p/w342/`;
 var titulo=document.getElementById("titulo");
-var imagen=document.getElementById("poster");
+var imagen=document.querySelector('.poster');
 var rating=document.getElementById("rating");
 var sinopsis=document.getElementById("sinopsis");
 var estreno=document.getElementById("estreno");
@@ -22,10 +22,9 @@ fetch(url)
   return response.json()
 })
 .then(function(data) {
-  console.log(data);
+ 
   titulo.innerHTML=data.original_title;
-  urlImg=urlImg+data.poster_path;
-  imagen.setAttribute(`src`,urlImg);
+  imagen.src=urlImg+data.poster_path;
   rating.innerHTML=data.vote_average;
   sinopsis.innerHTML=data.overview;
   estreno.innerHTML=data.release_date;

@@ -9,14 +9,14 @@ let id = qsToObject.get('id');
 // Agarramos el "id" de la queryStringObject y la guardamos
 
 let urll= `https://api.themoviedb.org/3/tv/${id}?api_key=fcb65972de75954111563f90b05f9fed`
-let urllImg=`https://image.tmdb.org/t/p/w342/`
+let urllImg=`https://image.tmdb.org/t/p/w342/` 
 var titulo=document.getElementById("titulo");
 var rating=document.getElementById("rating");
 var sinopsis=document.getElementById("sinopsis");
 var estreno=document.getElementById("estreno");
 var duracion=document.getElementById("duracion");
 var genero=document.getElementById("genero");
-var imagen=document.getElementById("imagen");
+var imagen=document.querySelector(".imagenSerie");
 
 fetch(urll)
 .then(function(response) {
@@ -25,7 +25,7 @@ fetch(urll)
 .then(function(data) {
   console.log(data);
   
-  urllImg=urllImg+data.poster_path;
+  imagen.src=urllImg+data.poster_path;
   titulo.innerHTML=data.original_name;
   rating.innerHTML=data.vote_average;
   sinopsis.innerHTML=data.overview;
@@ -39,3 +39,5 @@ fetch(urll)
   console.log("Error: " + error);
 })
 
+let enlaceGeneros= document.querySelector('#enlaceGeneros')
+enlaceGeneros.innerHTML=data.enlaceGeneros;
