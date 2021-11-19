@@ -30,9 +30,51 @@ fetch(url)
   estreno.innerHTML=data.release_date;
   duracion.innerHTML=data.runtime;
   genero.innerHTML += `<a href="generos.html?id=${data.genres[0].id}">${data.genres[0].name}</a>`; 
-  
+
+  //Array para guardar ids de gifs favoritos
+  let favoritos = []
+
+  //Si hay datos anteriores entonces debemos actualizar el array.
+  let recuperoStorage = localStorage.getItem('favoritos'); //Esto retorna un json.
+
+  if (recuperoStorage != null){
+      favoritos = JSON.parse(recuperoStorage);
+  }   
+
+  //Cuando el usuario haga click en el link
+  let linkFav = document.querySelector('.fav');
+
+  //Si el id está en el array de favoritos
+  if(favoritos.includes(id)){
+      linkFav.innerText = 'Quitar de favoritos'       
+  }
+
+
+  linkFav.addEventListener('click', function(event){
+      event.preventDefault();
+
+      //Pregunto si el id está en el array
+      if(favoritos.includes(id)){
+          //Quiero sacar el id del array. Necesito saber la posición.
+          let idASacar = favoritos.indexOf(id);
+          //Sacar el id del array
+          favoritos.splice(idASacar, 1);
+          linkFav.innerText = "Agregar a Favoritos";
+
+      } else {
+          //pushear un id al array.
+          favoritos.push(id);
+          linkFav.innerText = 'Quitar de favoritos'
+      }
+      
+      //Guardar el array en localStorage
+      let favoritosAString = JSON.stringify(favoritos);
+      localStorage.setItem('favoritos', favoritosAString);
+
+      //Cehquear que tenemos datos en localstorage
+      console.log(localStorage);
+    })
 })
 .catch(function(error) {
   console.log("Error: " + error);
 })
-
