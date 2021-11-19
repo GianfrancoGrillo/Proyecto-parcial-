@@ -31,7 +31,7 @@ fetch(urll)
   sinopsis.innerHTML=data.overview;
   estreno.innerHTML=data.first_air_date;
   duracion.innerHTML=data.number_of_episodes;
-  genero.innerHTML=data.genres;
+  genero.innerHTML=data.genres[0].name;
 
 
 })
