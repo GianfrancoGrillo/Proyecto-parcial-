@@ -2,6 +2,10 @@ let seriesFavoritas = [];
 let recuperoSeries = localStorage.getItem
 
 
+let peliculasFavoritas = [];
+let recuperoPeliculas = localStorage.getItem
+
+
 
 
 
