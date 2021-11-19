@@ -29,7 +29,7 @@ fetch(url)
   sinopsis.innerHTML=data.overview;
   estreno.innerHTML=data.release_date;
   duracion.innerHTML=data.runtime;
-  genero.innerHTML=data.genres[0].name;
+  genero.innerHTML += `<a href="generos.html?id=${data.genres[0].id}">${data.genres[0].name}</a>`; 
   
 })
 .catch(function(error) {
