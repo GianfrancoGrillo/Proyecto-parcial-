@@ -19,7 +19,7 @@ fetch(urlgeneroPelicula)
     listageneros += `<article> 
     <p>${data.results[i].title} </p>
     <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
-     <a href= "./detailsSeries.html?id=${data.results[i].id}"> Ver mas</a>
+     <a href= "./detalle-pelicula.html?id=${data.results[i].id}"> Ver mas</a>
      </article>`;
   }
   peliculasGenero.innerHTML= listageneros; 
@@ -42,7 +42,7 @@ fetch(urlgeneroSerie)
     listageneros += `<article> 
     <p>${data.results[i].original_name} </p>
     <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
-     <a href= "./detailsSeries.html?id=${data.results[i].id}"> Ver mas</a>
+     <a href= "./detalle-series.html?id=${data.results[i].id}"> Ver mas</a>
      </article>`;
   }
   seriesGenero.innerHTML= listageneros; 
