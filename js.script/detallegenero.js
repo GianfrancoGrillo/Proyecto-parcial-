@@ -36,7 +36,7 @@ fetch(urlgeneroSerie)
 })
 .then(function(data) {
   console.log(data);
-  let seriesGenero= document.querySelector(".generoSeries")
+  let seriesGenero= document.querySelector(".generoDetalleSeries")
   let listageneros= '';
   for(let i=0; i<data.results.length; i++ ){
     listageneros += `<article> 
