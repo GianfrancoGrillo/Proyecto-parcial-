@@ -1,14 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
+
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300&display=swap" rel="stylesheet">
     <link  class="logo"rel="icon" href="./img/Negro, Blanco y Triángulo Datos Juegos de Persecución Logo.png" type="image/png" />
-    <title>Resultado de Búsqueda | Movie Room</title>
- </head>
- <body>
-    <h1>Buscador</h1>
+    <title>Home | Movie Room</title>
+</head>
+<body>
+    <header>
+        <section class="main-container">
+            <form action="search-results.html" method="GET" class="buscar">
+                <input type="text" name="search" placeholder = "¿Qué estás buscando?">
+                <button type="submit" class="button">Buscar</button>
+                <p class= "aviso"></p>
+             </form>
+        </section>
+        <section class="main-header">
+            <img src="./img/Negro, Blanco y Triángulo Datos Juegos de Persecución Logo.png" alt="logotipo"
+                class="logo">
+        </section>
+
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="favourite.html">Favoritos</a></li>
+                <li><a href="generos.html">Géneros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="sectionRB">
+        
+           
+            </section>
+                <p class="resultado1"></p>
+            
+    
+                <article class="resultado2">
+                
+                </article>
+    
+            
+                <ul class="resultado3">
+                
+                </ul> 
+    
+                <section class="resultado4">
+    
+                    <article class="resultado5">
+                        <a href="detalle-pelicula.html" class="titulos">PELÍCULAS</a>
+                        <ul class="resultadosMovies"> 
+                        </ul>
+                    </article>
+    
+                    <article class="resultado6" >
+                        <a href="" class="titulos">SERIES</a>
+                        <ul class="resultadosSeries"> 
+                        </ul>
+                    </article>
+    
+                    <article class="resultado7">
+                        <a href="" class="titulos">PELÍCULAS MÁS VALORADAS</a>
+                        <ul class="resultadosTopMovies"> 
+                        </ul>
+                    </article>
+    
+                </section>
+                
+            </section>
+    </main>
+
+     <!-- Footer -->
+     <footer>
+        <p class="footer"> Cristiano Banfi | Gianfranco Grillo | Jacinta Villanueva</p>
+    </footer>
+    <script src="js.script/search-results.js"></script>
  </body>
+  
 </html>
