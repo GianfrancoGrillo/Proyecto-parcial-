@@ -10,3 +10,63 @@ let urlgeneroSerie= `https://api.themoviedb.org/3/discover/tv?api_key=fcb65972de
 
 let urlGenero = 'https://api.themoviedb.org/3/genre/movie/list?api_key=fcb65972de75954111563f90b05f9fed'
 
+// gen pel
+fetch(urlgeneroPelicula)
+.then(function(response) {
+  return response.json()
+})
+.then(function(data) {
+  console.log(data);
+  let peliculasGenero= document.querySelector(".#generoPelicula")
+  let listageneros= ''
+  for(let i=0; i<data.results.length; i++ ){
+    listageneros += `<article> 
+    <p>${data.results[i].title} </p>
+    <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
+    <a href="detalleGenero?id=${info[i].id}">
+    <h3>${info[i].name}</h3>
+ </a>
+     </article>`;
+  }
+  peliculasGenero.innerHTML= listageneros; 
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
+
+//   gen ser
+fetch(urlgeneroPelicula)
+.then(function(response) {
+  return response.json()
+})
+.then(function(data) {
+  console.log(data);
+  let seriesGenero= document.querySelector("generoSeries")
+  let listageneros= '';
+  for(let i=0; i<data.results.length; i++ ){
+    listageneros += `<article> 
+    <p>${data.results[i].original_name} </p>
+    <img src= "https://image.tmdb.org/t/p/w342${data.results[i].poster_path}" alt= '' />
+     <a href= "./detalle-series.html?id=${data.results[i].id}"> Ver mas</a>
+     </article>`;
+  }
+  seriesGenero.innerHTML= listageneros; 
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
+
+//gen
+
+fetch(urlGenero)
+.then(function(response) {
+  return response.json()
+})
+.then(function(data) {
+  console.log(data);
+  let titulo = document.querySelector(".titulo")
+  titulo.innerText+= data.name;
+})
+.catch(function(error) {
+  console.log("Error: " + error);
+})
