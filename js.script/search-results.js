@@ -1,4 +1,5 @@
-let spinner = document.querySelector('.spinner')
+window.addEventListener('load', function(){
+    let spinner = document.querySelector('.spinner')
     spinner.style.display = "none";
     
     //Capturamos el formulario
@@ -49,7 +50,7 @@ let spinner = document.querySelector('.spinner')
     
                 })
 
-    //TRACKS
+    
     //creamos variables con urls
     let proxy2 = 'https://developers.themoviedb.org/3/search/search-movies'
     let topMovies = `https://api.themoviedb.org/3/search/movie?q=${aBuscar}`//luego de ?q= ponemos la variable que armamos que contiene los datos dentro de nuesro buscador.
@@ -258,6 +259,4 @@ let spinner = document.querySelector('.spinner')
         //lo que sucede cuando retira el mouse
         elementolista.style.backgroungColor = "black";
     })
-
-
-    
+})
