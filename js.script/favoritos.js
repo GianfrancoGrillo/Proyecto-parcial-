@@ -7,12 +7,12 @@ console.log(localStorage);
 let recuperoStorageSeries = localStorage.getItem('SeriesFavoritos');
 let recuperoStorage = localStorage.getItem('favoritos');
 let favoritos = JSON.parse(recuperoStorage);
-let series= JSON.parse(recuperoStorageSeries);
+let series = JSON.parse(recuperoStorageSeries);
 //Capturar el elemendo del DOM donde los quiero mostrar.
 let lista = document.querySelector('.lista');
 let contenidoLista = '';
 
-if(favoritos == null || favoritos.length == 0 && series == null || series.length == 0){
+if(favoritos == null || favoritos.length == 0 && series == null){
     lista.innerHTML = '<h2>No hay favoritos seleccionados</h2>';
 }
 
