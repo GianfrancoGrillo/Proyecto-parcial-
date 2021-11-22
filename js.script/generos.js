@@ -15,7 +15,7 @@ fetch(url)
         for (let i = 0; i < info.length; i++) {
             genPelicula +=
             `
-            <a href="detalleGenero?id=${info[i].id}">
+            <a href="detallleGenero.html?id=${info[i].id}">
                 <h3>${info[i].name}</h3>
              </a>
         `;
@@ -50,7 +50,7 @@ let urll= 'https://api.themoviedb.org/3/genre/tv/list?api_key=c96a79dd3a41e33fa7
         for (let i = 0; i < info.length; i++) {
             genPelicula +=
             `
-            <a href="detalleGenero?id=${info[i].id}">
+            <a href="detallleGenero.html?id=${info[i].id}">
                 <h3>${info[i].name}</h3>
              </a>
         `;

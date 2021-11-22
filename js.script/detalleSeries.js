@@ -37,7 +37,7 @@ fetch(urll)
   let favoritos = []
 
   //Si hay datos anteriores entonces debemos actualizar el array.
-  let recuperoStorage = localStorage.getItem('favoritos'); //Esto retorna un json.
+  let recuperoStorage = localStorage.getItem('SeriesFavoritos'); //Esto retorna un json.
 
   if (recuperoStorage != null){
       favoritos = JSON.parse(recuperoStorage);
@@ -71,7 +71,7 @@ fetch(urll)
       
       //Guardar el array en localStorage
       let favoritosAString = JSON.stringify(favoritos);
-      localStorage.setItem('favoritos', favoritosAString);
+      localStorage.setItem('SeriesFavoritos', favoritosAString);
 
       //Cehquear que tenemos datos en localstorage
       console.log(localStorage);
