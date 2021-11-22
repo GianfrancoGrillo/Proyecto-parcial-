@@ -25,7 +25,10 @@ fetch(url)
     .then(function(data){
         console.log(data);
         contenidoLista += ` <article>
-                                    <h2>${data.title}</h2>
+                                    <h2>Titulo: ${data.title}</h2>
+                                    <img src="${data.poster_path}" alt="">
+
+                            
                                     
                                     
                                 </article>`
