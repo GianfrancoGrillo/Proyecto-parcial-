@@ -82,5 +82,3 @@ fetch(urll)
   console.log("Error: " + error);
 })
 
-let enlaceGeneros= document.querySelector('#enlaceGeneros')
-enlaceGeneros.innerHTML=data.enlaceGeneros;
