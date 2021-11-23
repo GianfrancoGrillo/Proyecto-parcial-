@@ -55,7 +55,7 @@ fetch(urll)
     .then(function(data){
         console.log(data);
         contenidoLista += ` <article>
-        <a href="detalle-serie.html?id=${data.id}">
+        <a href="detalle-series.html?id=${data.id}">
         <h2> Titulo: ${data.name}</h2>
         <img src="${imagenes + data.poster_path}" alt="">
         </a>
