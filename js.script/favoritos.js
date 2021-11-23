@@ -1,18 +1,17 @@
 const imagenes = `https://image.tmdb.org/t/p/w342`
 
 console.log('favoritos');
-
 console.log(localStorage);
-//Recuperar los ids del storage.
+
 let recuperoStorageSeries = localStorage.getItem('SeriesFavoritos');
 let recuperoStorage = localStorage.getItem('favoritos');
 let favoritos = JSON.parse(recuperoStorage);
 let series = JSON.parse(recuperoStorageSeries);
-//Capturar el elemendo del DOM donde los quiero mostrar.
+
 let lista = document.querySelector('.lista');
 let contenidoLista = '';
 
-if(favoritos == null || favoritos.length == 0 && series == null){
+if(favoritos == null || favoritos.length == 0){
     lista.innerHTML = '<h2>No hay favoritos seleccionados</h2>';
 }
 
@@ -28,12 +27,13 @@ fetch(url)
     })
     .then(function(data){
         console.log(data);
-        contenidoLista += ` <article>
+        contenidoLista += 
+        ` <article>
         <a href="detalle-pelicula.html?id=${data.id}">
                                     <h2>Titulo: ${data.title}</h2>
                                     <img src="${imagenes + data.poster_path}" alt="">
                                     </a>
-                                </article>`
+        </article>`
             lista.innerHTML = contenidoLista;
     
     })
@@ -54,12 +54,13 @@ fetch(urll)
     })
     .then(function(data){
         console.log(data);
-        contenidoLista += ` <article>
+        contenidoLista +=  
+        ` <article>
         <a href="detalle-series.html?id=${data.id}">
         <h2> Titulo: ${data.name}</h2>
         <img src="${imagenes + data.poster_path}" alt="">
         </a>
-                                </article>`
+         </article>`
             lista.innerHTML = contenidoLista;
     
     })
